@@ -1,0 +1,258 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    align-items: center;
+	font-family: 'Montserrat', sans-serif;
+}
+.header{
+	min-height: 100vh;
+	width: 100%;
+}
+.navBar{
+	background-color: white;
+	overflow: hidden;
+	min-height: 15vh;
+	position: fixed;
+	top: 0;
+	display: flex;
+	width: 100%;
+	align-content: center;
+	z-index: 1;
+}
+nav{
+	display: flex;
+	padding: 2% 6%;
+	justify-content: space-between;
+	align-items: center;
+	min-width: 90%;
+}
+.nav-links ul li{
+	list-style: none;
+	cursor: pointer;
+	display: inline-block;
+	padding: 8px 12px;
+	position: relative;
+    flex: 1;
+	text-align: right;
+    color: rgb(0, 0, 0);
+	text-decoration: none;
+	font-size: 17px;
+	font-family: 'Montserrat', sans-serif;
+}
+.nav-links ul li.selected{
+	color: blue;
+}
+.nav-links ul li::after{
+	content: "";
+	width: 0%;
+	height: 2px;
+	background: blue;
+	display: block;
+	margin: auto;
+	transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+		width: 100%;
+	}
+.nameHead{
+	display: flex;
+
+}
+.myName{
+	font-weight: bold;
+	font-size: 25px;
+	padding: 5px;
+}
+.designation{
+	font-weight: lighter;
+	font-size: 17px;
+	padding: 16px;
+	font-family: 'Montserrat', sans-serif;
+}
+.home{
+	margin-top: 15vh;
+	display: flex;
+	width: 100%;
+	height: 110vh;
+	position: relative;
+	align-items: center;
+}
+.hidden_desc{
+	display: none;
+}
+.middle{
+	min-height: 60vh;
+	min-width: 50vw;
+	margin-left: -300px;
+	position: relative;
+	display: flex;
+}
+.left{
+	background-color: rgb(230, 218, 206);
+	min-width: 40vw;
+	position: relative;
+	min-height: 110vh;
+}
+h1, h3, h2, h6{
+	font-family: 'Roboto', sans-serif;
+}
+.intro h1{
+	font-size: 100px;
+	font-weight: 900;
+}
+.intro h6{
+	font-size: 27px;
+	font-weight: 500;
+}
+.intro{
+	margin-top: 25px;
+	margin-left: 30px;
+}
+button{
+	display: inline-block;
+	width: 120px;
+	height: 35px;
+	padding: 5px 18px;
+	text-align: center;
+	font-size: 13px;
+	border-radius: 20px;
+	cursor: pointer;
+	text-align: center;
+}
+.resume{
+	background-color: blue;
+	border: 2px solid blue;
+	color: white;
+}
+.resume:hover{
+	background-color: white;
+	color: black;
+}
+.project{
+	background-color: white;
+	border: 2px solid black;
+	color: black;
+}
+.project:hover{
+	background-color: blue;
+	border: 2px solid blue;
+	color: white;
+}
+.profile{
+	width: 50%;
+	background-color: #F4ECE6;
+	text-align: center;
+	box-shadow: -16px 16px 17px 0 rgba(0, 0, 0, 0.199);
+}
+.profile img{
+	display: block;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	margin: auto;
+	margin-top: 50px;
+	
+}
+.proName{
+	font-size: 27px;
+}
+.proDesignation{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 17px;
+}
+.line{
+	border-bottom: 2px solid blue;
+	width: 20%;
+	margin: 0 auto;
+}
+.social{
+	background-color: white;
+	min-height: 40px;
+	margin-top: 10px;
+	margin-bottom: 0;
+	font-size: 25px;
+	padding-top: 17px;
+	letter-spacing: 0.5rem;
+}
+.fab{
+	cursor: pointer;
+	color: black;
+}
+.para{
+	max-width: 25vw;
+}
+footer{
+	display: flex;
+	min-height: 15vh;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 70px;
+}
+.contacts{
+	display: flex;
+	align-items: center;
+	text-align: center;
+	justify-content: space-between;
+	width: 30%;
+	font-size: 15px;
+}
+.contacts h6{
+	font-size: 15px;
+}
+.contacts div a{
+	color: black;
+}
+.hidden_desc{
+	display:none;
+	visibility:hidden;
+}
+#page_content{
+	margin-top: 15vh;
+	display: flex;
+	width: 100%;
+	height: 110vh;
+	position: relative;
+	align-items: center;
+}
+.res{
+	background-color: rgb(230, 218, 206);
+	width: 100%;
+	min-height: 110vh;
+	align-items: center;
+	position: relative;
+	text-align: center;
+	align-content: center;
+	padding-top: 20% ;
+}
+.res .experience{
+	max-width: 45%;
+	margin: auto;
+}
+.res .experience .cv{
+	margin: 80px 0;
+	display: flex;
+	max-width: 100%;
+	justify-content: space-between;
+}
+.infoCard{
+	max-width: 100%;
+	max-height: 30%;
+	display: flex;
+	background-color: white;
+}
+.infoCard .leftInfo{
+	margin: 0;
+	min-width: 40%;
+	display: flex;
+	flex-direction: column ;
+	padding-top: 70px;
+	padding-left: 40px;
+	text-align: left;
+}
+.infoCard .rightInfo{
+	margin: 0;
+	max-width: 60%;
+	margin-top: 20px;
+}
