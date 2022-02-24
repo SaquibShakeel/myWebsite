@@ -14,6 +14,9 @@
 </head>
 <body>
     <div class="header">
+        <!-- ---------------------------------------------NAVBAR--------------------------------------------- -->
+
+
         <div class="navBar">
             <nav>
                 <div class="nameHead">
@@ -22,20 +25,24 @@
                 </div>
                 <div class="nav-links">
                     <ul>
-                        <li class="notselected" id="about" onclick="change_tab(this.id);">ABOUT ME</li>
-                        <li class="notselected" id="resume" onclick="change_tab(this.id);">RESUME</li>
-                        <li class="notselected" id="projects" onclick="change_tab(this.id);">PROJECT</li>
-                        <li class="notselected" id="contacts" onclick="change_tab(this.id);">CONTACT</li>
+                        <li class="notselected" id="about" >ABOUT ME</li>
+                        <li class="notselected" id="resume" >RESUME</li>
+                        <li class="notselected" id="projects" >PROJECT</li>
+                        <li class="notselected" id="contacts" >CONTACT</li>
                     </ul>
                 </div>
             </nav>
         </div>
+
+        <!-- -------------------------------------------ABOUT PAGE-------------------------------------------------- -->
+
+
         <div class="home hidden_desc " id="about_desc">
             <div class="left"></div>
             <div class="middle">
                 <div class="profile">
                     <div class="img">
-                        <img src="/images/image0.jpeg" alt="profile" >
+                        <img src="./images/image0.jpeg" alt="profile" >
                     </div><br>
                     <div class="proName">
                         <h2>Md Saquib</h2>
@@ -66,13 +73,17 @@
                 </div>
             </div>
         </div>
+
+        <!-- ----------------------------------------------RESUME PAGE------------------------------------------------- -->
+
+
         <div class="hidden_desc" id="resume_desc">
             <div class="res">
                 <h1>Resume</h1>
                 <div class="experience">
                     <div class="cv">
                         <h2>Experience</h2>
-                        <button id="cv" onclick="window.open('/images/file.pdf');">Download CV</button>
+                        <button id="cv" class="resume" onclick="window.open('/images/file.pdf');"><b>DOWNLOAD CV</b></button>
                     </div>
                     <div class="infoCard">
                         <div class="leftInfo">
@@ -88,9 +99,25 @@
                 </div>
             </div>
         </div>
+
+        <!-- ----------------------------------------------PROJECT PAGE------------------------------------------------- -->
+
+
         <div class="home hidden_desc" id="projects_desc"></div>
+
+        <!-- --------------------------------------------------CONTACTS PAGE------------------------------------------------ -->
+
+
         <div class="home hidden_desc" id="contacts_desc"></div>
+
+        <!-- -----------------------------------------------------PAGE CONTENT------------------------------------------------ -->
+
+
         <div class="home" id="page_content"></div>
+
+        <!-- -------------------------------------------------------FOOTER----------------------------------------------------- -->
+
+
         <footer>
             <div class="sign">© 2021 by Md Saquib Shakeel.</div>
             <div class="contacts">
@@ -110,18 +137,7 @@
     </div>
 
 <!-- scripts -->
-<script>
-    function change_tab(id)
-    {
-      document.getElementById("page_content").innerHTML=document.getElementById(id+"_desc").innerHTML;
-      document.getElementById("about").className="notselected";
-      document.getElementById("resume").className="notselected";
-      document.getElementById("projects").className="notselected";
-      document.getElementById("contacts").className="notselected";
-      document.getElementById(id).className="selected";
-    }
-    window.onload = change_tab("about");
-</script>
+<script src="./script.js"></script>
 
 </body>
 </html>

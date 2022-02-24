@@ -127,7 +127,7 @@ button{
 	color: white;
 }
 .resume:hover{
-	background-color: white;
+	background-color: transparent;
 	color: black;
 }
 .project{
@@ -235,6 +235,10 @@ footer{
 	display: flex;
 	max-width: 100%;
 	justify-content: space-between;
+}
+#cv{
+	width: 150px;
+	padding: 6px 15px;
 }
 .infoCard{
 	max-width: 100%;
