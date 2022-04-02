@@ -4,7 +4,10 @@
 }
 body{
     align-items: center;
-	font-family: 'Montserrat', sans-serif;
+	/* font-family: 'Montserrat', sans-serif; */
+	font-family: 'Darker Grotesque', sans-serif;
+	font-size: 20px;
+	letter-spacing: 1px;
 }
 .header{
 	min-height: 100vh;
@@ -13,13 +16,13 @@ body{
 .navBar{
 	background-color: white;
 	overflow: hidden;
-	min-height: 15vh;
+	height: 15vh;
 	position: fixed;
 	top: 0;
 	display: flex;
 	width: 100%;
 	align-content: center;
-	z-index: 1;
+	z-index: 5;
 }
 nav{
 	display: flex;
@@ -38,8 +41,10 @@ nav{
 	text-align: right;
     color: rgb(0, 0, 0);
 	text-decoration: none;
-	font-size: 17px;
-	font-family: 'Montserrat', sans-serif;
+	font-size: 20px;
+	/* font-family: 'Montserrat', sans-serif; */
+	font-family: 'Darker Grotesque', sans-serif;
+	letter-spacing: 1px;
 }
 .nav-links ul li.selected{
 	color: blue;
@@ -60,22 +65,38 @@ nav{
 	display: flex;
 
 }
+.square{
+	width: 20px;
+	height: 20px;
+	background-color: blue;
+	margin: auto 10px;
+	
+}
+.titleContainer{
+	display: flex;
+	justify-content: center;
+}
+.titleContainer .square{
+	margin: auto 10px 26px 0;
+}
 .myName{
 	font-weight: bold;
-	font-size: 25px;
+	font-size: 30px;
 	padding: 5px;
 }
 .designation{
 	font-weight: lighter;
-	font-size: 17px;
+	font-size: 25px;
 	padding: 16px;
-	font-family: 'Montserrat', sans-serif;
+	/* font-family: 'Montserrat', sans-serif; */
+	font-family: 'Darker Grotesque', sans-serif;
+	letter-spacing: 1px;
 }
 .home{
 	margin-top: 15vh;
 	display: flex;
 	width: 100%;
-	height: 110vh;
+	min-height: 110vh;
 	position: relative;
 	align-items: center;
 }
@@ -96,10 +117,11 @@ nav{
 	min-height: 110vh;
 }
 h1, h3, h2, h6{
-	font-family: 'Roboto', sans-serif;
+	/* font-family: 'Roboto', sans-serif; */
+	font-family: 'Darker Grotesque', sans-serif;
 }
 .intro h1{
-	font-size: 100px;
+	font-size: 140px;
 	font-weight: 900;
 }
 .intro h6{
@@ -156,11 +178,12 @@ button{
 	
 }
 .proName{
-	font-size: 27px;
+	font-size: 30px;
 }
 .proDesignation{
-	font-family: 'Montserrat', sans-serif;
-	font-size: 17px;
+	/* font-family: 'Montserrat', sans-serif; */
+	font-family: 'Darker Grotesque', sans-serif;
+	font-size: 25px;
 }
 .line{
 	border-bottom: 2px solid blue;
@@ -185,10 +208,17 @@ button{
 }
 footer{
 	display: flex;
-	min-height: 15vh;
+	position: relative;
+	background-color: white;
+	margin-bottom: 0;
+	height: 15vh;
 	align-items: center;
 	justify-content: space-between;
 	padding: 0 70px;
+	z-index: 10;
+}
+.sign{
+	font-size: 25px;
 }
 .contacts{
 	display: flex;
@@ -199,7 +229,7 @@ footer{
 	font-size: 15px;
 }
 .contacts h6{
-	font-size: 15px;
+	font-size: 19px;
 }
 .contacts div a{
 	color: black;
@@ -218,13 +248,17 @@ footer{
 }
 .res{
 	background-color: rgb(230, 218, 206);
+	margin-top: -15vh;
 	width: 100%;
-	min-height: 110vh;
+	height: 110vh;
 	align-items: center;
 	position: relative;
 	text-align: center;
 	align-content: center;
 	padding-top: 20% ;
+}
+.res h1{
+	font-size: 70px;
 }
 .res .experience{
 	max-width: 45%;
@@ -245,18 +279,29 @@ footer{
 	max-height: 30%;
 	display: flex;
 	background-color: white;
+	box-shadow: 0 0 17px 16px rgba(0, 0, 0, 0.096);
 }
 .infoCard .leftInfo{
 	margin: 0;
 	min-width: 40%;
 	display: flex;
 	flex-direction: column ;
+	padding: 40px;
 	padding-top: 70px;
-	padding-left: 40px;
 	text-align: left;
 }
 .infoCard .rightInfo{
 	margin: 0;
 	max-width: 60%;
 	margin-top: 20px;
+	padding: 40px;
+	padding-top: 75px;
+	text-align: left;
+}
+.infoCard .leftInfo h3{
+	color: blue;
+}
+.infoCard p{
+	font-size: 13px;
+	/* font-weight: 600; */
 }
