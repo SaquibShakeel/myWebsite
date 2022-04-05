@@ -2,26 +2,30 @@ window.onload = change_tab("about");
 
 document.querySelector("#about").addEventListener("click", function(){
     change_tab(this.id);
+    hideMenu();
 });
 document.querySelector("#resume").addEventListener("click", function(){
     change_tab(this.id);
+    hideMenu();
 });
 document.querySelector("#projects").addEventListener("click", function(){
     change_tab(this.id);
+    hideMenu();
 });
 document.querySelector("#contacts").addEventListener("click", function(){
     change_tab(this.id);
+    hideMenu();
 });
 
 var menu = document.getElementById("menu");
 var close = document.getElementById("closeBtn");
 function showMenu(){
   menu.style.left="0";
-  close.style.right="37px";
+  close.style.left="87%";
 }
 function hideMenu(){
   menu.style.left="-100%";
-  close.style.right="-100px";
+  close.style.left="-13%";
 }
 
 function change_tab(id) {

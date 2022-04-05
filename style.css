@@ -118,6 +118,9 @@ h1, h3, h2, h6{
 	font-size: 140px;
 	font-weight: 900;
 }
+.btnHide{
+	display: none;
+}
 .intro h6{
 	font-size: 27px;
 	font-weight: 500;
@@ -216,6 +219,7 @@ button{
 }
 .contacts{
 	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
 	text-align: center;
 	justify-content: space-between;
@@ -227,6 +231,7 @@ button{
 }
 .contacts div a{
 	color: black;
+	text-decoration: none;
 }
 .hidden_desc{
 	display:none;
@@ -358,7 +363,7 @@ input:hover, textarea:hover{
 }
 .proImg img{
 	margin: 20px;
-	width: 40vw;
+	width: 80%;
 	border: 1px solid blue;
 	padding: 5px;
 }
@@ -368,6 +373,7 @@ input:hover, textarea:hover{
 
 @media only screen and (max-width: 700px) {
 	nav{
+		position: relative;
 		margin: 0;
 		padding: 0 10px 0 10px;
 	}
@@ -386,7 +392,7 @@ input:hover, textarea:hover{
 	}
 
 	nav ul{
-		position: fixed;
+		position: absolute;
 		top: 0;
 		left: -100%;
 		padding: 15vh 0;
@@ -402,12 +408,64 @@ input:hover, textarea:hover{
 		margin: 20px 0;
 		font-weight: 600;
 	}
+	nav ul li:hover::after{
+		width: 0;
+	}
 	#closeBtn{
-		position: fixed;
+		position: absolute;
 		z-index: 10;
 		top: 30px;
-		right: -100px;
+		left: -13%;
 		transition: all 0.8s ease;
+	}
+	.home{
+		margin-top: 0;
+		padding-top: 0;
+	}
+	#page_content{
+		margin-top: 0;
+		padding-top: 0;
+	}
+	.left{
+		min-width: 100%;
+		margin-top: 15vh;
+		padding: 0;
+	}
+	.middle{
+		margin-left: -380px;
+		display: block;
+	}
+	.profile{
+		width: 100%;
+	}
+	.profile img{
+		margin-top: 50px;
+	}
+	.proDesignation{
+		display: none;
+	}
+	.btnHide{
+		display: block;
+	}
+	.btn{
+		display: none;
+	}
+	.para{
+		max-width: 100%;
+		margin-top: -40px;
+	}
+	.footer{
+		height: 25vh;
+		text-align: left;
+		flex-wrap: wrap-reverse;
+		padding: 20px 40px;
+		align-items: flex-start;
+	}
+	.contacts{
+		text-align: left;
+	}
+	.contacts div{
+		margin: 15px 0;
 	}
 	
 }
