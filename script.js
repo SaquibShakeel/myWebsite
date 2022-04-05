@@ -13,6 +13,17 @@ document.querySelector("#contacts").addEventListener("click", function(){
     change_tab(this.id);
 });
 
+var menu = document.getElementById("menu");
+var close = document.getElementById("closeBtn");
+function showMenu(){
+  menu.style.left="0";
+  close.style.right="37px";
+}
+function hideMenu(){
+  menu.style.left="-100%";
+  close.style.right="-100px";
+}
+
 function change_tab(id) {
   document.getElementById("page_content").innerHTML = document.getElementById(
     id + "_desc"

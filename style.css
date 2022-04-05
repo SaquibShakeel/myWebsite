@@ -4,7 +4,6 @@
 }
 body{
     align-items: center;
-	/* font-family: 'Montserrat', sans-serif; */
 	font-family: 'Darker Grotesque', sans-serif;
 	font-size: 20px;
 	letter-spacing: 1px;
@@ -13,43 +12,38 @@ body{
 	min-height: 100vh;
 	width: 100%;
 }
-.navBar{
-	background-color: white;
-	overflow: hidden;
+nav{
 	height: 15vh;
+	background-color: white;
+	display: flex;
 	position: fixed;
 	top: 0;
-	display: flex;
-	width: 100%;
-	align-content: center;
-	z-index: 5;
-}
-nav{
-	display: flex;
-	padding: 2% 6%;
+	padding: 0 80px 0 80px;
 	justify-content: space-between;
 	align-items: center;
+	z-index: 5;
 	min-width: 90%;
 }
-.nav-links ul li{
+nav ul{
+	display: flex;
 	list-style: none;
-	cursor: pointer;
-	display: inline-block;
-	padding: 8px 12px;
-	position: relative;
-    flex: 1;
-	text-align: right;
-    color: rgb(0, 0, 0);
-	text-decoration: none;
-	font-size: 20px;
-	/* font-family: 'Montserrat', sans-serif; */
-	font-family: 'Darker Grotesque', sans-serif;
-	letter-spacing: 1px;
 }
-.nav-links ul li.selected{
+nav ul li{
+	margin: 0 8px;
+	cursor: pointer;
+	font-size: 20px;
+	letter-spacing: 1px;
+	font-family: 'Darker Grotesque', sans-serif;
+	color: rgb(0, 0, 0);
+}
+nav ul li.selected{
 	color: blue;
 }
-.nav-links ul li::after{
+nav img{
+	width: 40px;
+	display: none;
+}
+nav ul li::after{
 	content: "";
 	width: 0%;
 	height: 2px;
@@ -58,7 +52,7 @@ nav{
 	margin: auto;
 	transition: 0.5s;
 }
-.nav-links ul li:hover::after{
+nav ul li:hover::after{
 		width: 100%;
 	}
 .nameHead{
@@ -370,4 +364,50 @@ input:hover, textarea:hover{
 }
 .proImg img:hover{
 	box-shadow: 0 0 17px 16px rgba(34, 34, 179, 0.305);
+}
+
+@media only screen and (max-width: 700px) {
+	nav{
+		margin: 0;
+		padding: 0 10px 0 10px;
+	}
+	nav img{
+		display: block;
+	}
+	.myName{
+		padding-bottom: 15px;
+	}
+	.nameHead{
+		flex-direction: column;
+	}
+	.designation{
+		padding: 0;
+		margin-top: -15px;
+	}
+
+	nav ul{
+		position: fixed;
+		top: 0;
+		left: -100%;
+		padding: 15vh 0;
+		height: 100vh;
+		width: 100%;
+		display: block;
+		text-align: center;
+		background: #F4ECE6;
+		transition: all 0.8s ease;
+	}
+	nav ul li{
+		font-size: 30px;
+		margin: 20px 0;
+		font-weight: 600;
+	}
+	#closeBtn{
+		position: fixed;
+		z-index: 10;
+		top: 30px;
+		right: -100px;
+		transition: all 0.8s ease;
+	}
+	
 }
