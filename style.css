@@ -370,7 +370,11 @@ input:hover, textarea:hover{
 .proImg img:hover{
 	box-shadow: 0 0 17px 16px rgba(34, 34, 179, 0.305);
 }
-
+@media only screen and (max-width: 380px){
+	.left{
+		min-height: 140vh;
+	}
+}
 @media only screen and (max-width: 700px) {
 	nav{
 		position: relative;
@@ -382,6 +386,7 @@ input:hover, textarea:hover{
 	}
 	.myName{
 		padding-bottom: 15px;
+		font-size: 25px;
 	}
 	.nameHead{
 		flex-direction: column;
@@ -432,7 +437,7 @@ input:hover, textarea:hover{
 		padding: 0;
 	}
 	.middle{
-		margin-left: -380px;
+		margin-left: -365px;
 		display: block;
 	}
 	.profile{
@@ -455,7 +460,7 @@ input:hover, textarea:hover{
 		margin-top: -40px;
 	}
 	.footer{
-		height: 25vh;
+		height: 30%;
 		text-align: left;
 		flex-wrap: wrap-reverse;
 		padding: 20px 40px;
