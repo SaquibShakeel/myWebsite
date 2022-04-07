@@ -37,6 +37,9 @@ function change_tab(id) {
   document.getElementById("projects").className = "notselected";
   document.getElementById("contacts").className = "notselected";
   document.getElementById(id).className = "selected";
+
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
 }
 
 
