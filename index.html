@@ -24,32 +24,36 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TS94CPB"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <div class="header">
         <!-- ---------------------------------------------NAVBAR--------------------------------------------- -->
 
 
             <nav>
-                <div class="nameHead">
-                    <div class="titleContainer">
-                    <div class="square"></div>
-                    <div class="myName"><h3>Md Saquib Shakeel</h3></div></div>
-                    <div class="designation">/ WEB DEVELOPER</div>
+                <div class="nav-bar">
+                    <div class="nameHead">
+                        <div class="titleContainer">
+                            <div class="square"></div>
+                            <h3>Md Saquib Shakeel</h3>
+                        </div>
+                        <div class="designation">WEB DEVELOPER</div>
+                    </div>
+                    <img id="openBtn" src="./images/bars-solid.svg" alt="open" onclick="showMenu()" srcset="">
+                    <div id="menu">
+                        <ul>
+                            <li class="notselected" id="about" >ABOUT&nbspME</li>
+                            <li class="notselected" id="resume" >RESUME</li>
+                            <li class="notselected" id="projects" >PROJECT</li>
+                            <li class="notselected" id="contacts" >CONTACT</li>
+                        </ul>
+                        <img id="closeBtn" src="./images/xmark-solid.svg" alt="close" onclick="hideMenu()" srcset="">
+                    </div>
                 </div>
-                <img id="openBtn" src="./images/bars-solid.svg" alt="open" onclick="showMenu()" srcset="">
-                <ul id="menu">
-                    <li class="notselected" id="about" >ABOUT ME</li>
-                    <li class="notselected" id="resume" >RESUME</li>
-                    <li class="notselected" id="projects" >PROJECT</li>
-                    <li class="notselected" id="contacts" >CONTACT</li>
-                </ul>
-                <img id="closeBtn" src="./images/xmark-solid.svg" alt="close" onclick="hideMenu()" srcset="">
             </nav>
 
         <!-- -------------------------------------------ABOUT PAGE-------------------------------------------------- -->
 
 
-        <div class="home hidden_desc " id="about_desc">
-            <div class="left"></div>
+        <div class="hidden_desc " id="about_desc">
+            <div class="home">
             <div class="middle">
                 <div class="profile"><br>
                     <div class="img">
@@ -86,6 +90,7 @@
                         <p>I'm currently persuing my B.Tech in Electrical Engineering (2nd year) from Jamia MIllia Islamia, New Delhi. </p>
                     </div>
                 </div>
+            </div>
             </div>
         </div>
 
@@ -221,13 +226,14 @@
         <!-- ----------------------------------------------PROJECT PAGE------------------------------------------------- -->
 
 
-        <div class="home hidden_desc" id="projects_desc">
+        <div class="hidden_desc" id="projects_desc">
             <div class="res">
                 <div class="experience">
                     <div class="titleContainer">
                         <div class="square"></div>
                         <h1>Projects</h1>
                     </div>
+                    <br><br><br>
                     <div class="infoCard">
                         <div class="proImg">
                             <h3>Weather App</h3>
@@ -259,39 +265,40 @@
         <!-- --------------------------------------------------CONTACTS PAGE------------------------------------------------ -->
 
 
-        <div class="home hidden_desc" id="contacts_desc">
+        <div class="hidden_desc" id="contacts_desc">
             <div class="res">
                 <div class="experience">
                 <div class="titleContainer">
                     <div class="square"></div>
                     <h1>Let's talk</h1>
                 </div>
+                <br><br><br>
                 <div class="infoCard">
-                    <form action="submit">
+                    <form id="contact-form">
                         <div class="nameContainer">
                             <div class="nameLabel">
                                 <label for="fname">First Name</label>
-                                <input type="text" name="fname" id="fname">
+                                <input type="text" name="fname" id="fname" required>
                             </div>
                             <div class="nameLabel">
                                 <label for="fname">Last Name</label>
-                                <input type="text" name="fname" id="fname">
+                                <input type="text" name="fname" id="lname" required>
                             </div>
                         </div>
                         <div class="nameLabel">
                             <label>Email</label>
-                            <input type="email" name="email" id="email">
+                            <input type="email" name="email" id="email" required>
                         </div>
                         <div class="nameLabel">
                             <label>Subject</label>
-                            <input type="text" name="subject" id="subject">
+                            <input type="text" name="subject" id="subject" required>
                         </div>
                         <div class="nameLabel">
                             <label>Message</label>
-                            <textarea id="message" name="message" rows="8" cols="50"></textarea>
+                            <textarea id="message" name="message" rows="8" cols="50" required></textarea>
                         </div>
                         <div class="nameLabel">
-                        <button onClick="ga('send', 'event', 'Download CV', 'Button Click', 'CV download', '0');" class="resume" type="submit"><b>SEND</b></button>
+                        <button id="submit-btn" class="resume" type="submit"><b>SEND</b></button>
                         </div>
                     </form>
                 </div>
@@ -303,9 +310,7 @@
         <!-- -----------------------------------------------------PAGE CONTENT------------------------------------------------ -->
 
 
-        <div class="home" id="page_content"></div>
-
-    </div>
+        <div id="page_content"></div>
         <!-- -------------------------------------------------------FOOTER----------------------------------------------------- -->
 
 
@@ -319,9 +324,9 @@
             <div>
                 <h6>Follow</h6>
                 <a href="https://twitter.com/SaquibShakeel1"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.linkedin.com/in/md-saquib-shakeel-22629b202/"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://github.com/SaquibShakeel"><i class="fab fa-github"></i></a>
-                    <a href="http://www.instagram.com/mdsaquib_11"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/md-saquib-shakeel-22629b202/"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/SaquibShakeel"><i class="fab fa-github"></i></a>
+                <a href="http://www.instagram.com/mdsaquib_11"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
     </div>

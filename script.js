@@ -18,14 +18,11 @@ document.querySelector("#contacts").addEventListener("click", function(){
 });
 
 var menu = document.getElementById("menu");
-var close = document.getElementById("closeBtn");
 function showMenu(){
   menu.style.left="0";
-  close.style.left="87%";
 }
 function hideMenu(){
   menu.style.left="-100%";
-  close.style.left="-13%";
 }
 
 function change_tab(id) {
@@ -41,5 +38,4 @@ function change_tab(id) {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
-
 

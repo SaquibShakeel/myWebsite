@@ -1,40 +1,49 @@
 *{
     margin: 0;
     padding: 0;
+	box-sizing: border-box;
 }
 body{
     align-items: center;
 	font-family: 'Darker Grotesque', sans-serif;
-	font-size: 20px;
+	font-size: 1.2rem;
 	letter-spacing: 1px;
 }
-.header{
-	min-height: 100vh;
-	width: 100%;
-}
 nav{
+	height: 15vh;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	display: flex;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+}
+.nav-bar{
 	height: 15vh;
 	background-color: white;
 	display: flex;
 	position: fixed;
 	top: 0;
-	padding: 0 80px 0 80px;
+	left: 0;
+	padding: 0 10%;
 	justify-content: space-between;
 	align-items: center;
 	z-index: 5;
-	min-width: 90%;
+	width: 100%;
 }
 nav ul{
 	display: flex;
+	align-items: center;
+	justify-content: center;
 	list-style: none;
 }
 nav ul li{
-	margin: 0 8px;
+	margin: 0 0.5rem;
 	cursor: pointer;
-	font-size: 20px;
+	font-size: 1.2rem;
 	letter-spacing: 1px;
-	font-family: 'Darker Grotesque', sans-serif;
-	color: rgb(0, 0, 0);
+	color: #000;
 }
 nav ul li.selected{
 	color: blue;
@@ -57,77 +66,69 @@ nav ul li:hover::after{
 	}
 .nameHead{
 	display: flex;
-
-}
-.square{
-	width: 20px;
-	height: 20px;
-	background-color: blue;
-	margin: auto 10px;
-	
+	align-items: center;
+	flex-shrink: 0;
+	justify-content: flex-start;
 }
 .titleContainer{
 	display: flex;
+	align-items: center;
 	justify-content: center;
 }
 .titleContainer .square{
-	margin: auto 10px 26px 0;
+	width: 20px;
+	height: 20px;
+	background-color: blue;
+	margin-right: 0.5rem;
 }
-.myName{
+.titleContainer h3{
 	font-weight: bold;
-	font-size: 30px;
-	padding: 5px;
+	font-size: 2rem;
+	padding-bottom: 0.25rem;
 }
-.designation{
+.nameHead .designation{
 	font-weight: lighter;
-	font-size: 25px;
-	padding: 16px;
-	/* font-family: 'Montserrat', sans-serif; */
-	font-family: 'Darker Grotesque', sans-serif;
+	font-size: 1.2rem;
+	align-self: center;
+	line-height: 2rem;
+	margin-left: 0.5rem;
 	letter-spacing: 1px;
 }
+.nameHead .designation::before{
+	content: "/";
+	font-weight: 500;
+	padding-right: 0.25rem;
+}
 .home{
-	margin-top: 15vh;
 	display: flex;
+	padding: 10%;
 	width: 100%;
-	min-height: 110vh;
 	position: relative;
+	justify-content: center;
 	align-items: center;
+	background: linear-gradient(to right, #e6dace 0%,#e6dace 40%,#e6dace 40%,#fff 40%,#fff 100%);
 }
 .hidden_desc{
 	display: none;
 }
 .middle{
-	min-height: 60vh;
-	min-width: 50vw;
-	margin-left: -300px;
+	width: 800px;
 	position: relative;
 	display: flex;
 }
-.left{
-	background-color: rgb(230, 218, 206);
-	min-width: 40vw;
-	position: relative;
-	min-height: 110vh;
-}
-h1, h3, h2, h6{
-	/* font-family: 'Roboto', sans-serif; */
-	font-family: 'Darker Grotesque', sans-serif;
-}
 .intro h1{
-	font-size: 140px;
+	font-size: 8rem;
 	font-weight: 900;
 }
 .btnHide{
 	display: none;
 }
 .intro h6{
-	font-size: 27px;
+	font-size: 1.8rem;
 	font-weight: 500;
 }
-.intro{
-	margin-top: 25px;
-	margin-left: 30px;
+.intro>*{
+	margin: 0 2rem;
 }
 button{
 	display: inline-block;
@@ -160,7 +161,7 @@ button{
 	color: white;
 }
 .profile{
-	width: 50%;
+	width: 60%;
 	background-color: #F4ECE6;
 	text-align: center;
 	box-shadow: -16px 16px 17px 0 rgba(0, 0, 0, 0.199);
@@ -178,8 +179,6 @@ button{
 	font-size: 30px;
 }
 .proDesignation{
-	/* font-family: 'Montserrat', sans-serif; */
-	font-family: 'Darker Grotesque', sans-serif;
 	font-size: 25px;
 }
 .line{
@@ -187,17 +186,17 @@ button{
 	width: 20%;
 	margin: 0 auto;
 }
-.social{
+.profile .social{
 	background-color: white;
-	min-height: 40px;
-	margin-top: 10px;
-	margin-bottom: 0;
-	font-size: 25px;
-	padding-top: 17px;
-	letter-spacing: 0.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 50px;
+	font-size: 1.8rem;
 }
 .fab{
 	cursor: pointer;
+	padding: 1rem;
 	color: black;
 }
 .para{
@@ -205,17 +204,16 @@ button{
 }
 .footer{
 	display: flex;
-	position: relative;
 	background-color: white;
 	margin-bottom: 0;
-	height: 15vh;
+	min-height: 15vh;
 	align-items: center;
 	justify-content: space-between;
-	padding: 0 70px;
+	padding: 0 10%;
 	z-index: 10;
 }
 .sign{
-	font-size: 25px;
+	font-size: 1.5rem;
 }
 .contacts{
 	display: flex;
@@ -223,11 +221,16 @@ button{
 	align-items: center;
 	text-align: center;
 	justify-content: space-between;
-	width: 30%;
 	font-size: 15px;
 }
+.contacts>*{
+	margin: 0 1rem;
+}
 .contacts h6{
-	font-size: 19px;
+	font-size: 1.2rem;
+}
+.contacts .fab{
+	padding: unset;
 }
 .contacts div a{
 	color: black;
@@ -237,35 +240,26 @@ button{
 	display:none;
 	visibility:hidden;
 }
-#page_content{
-	margin-top: 15vh;
-	display: flex;
-	width: 100%;
-	min-height: 110vh;
-	position: relative;
-	align-items: center;
-}
 .res{
-	background-color: rgb(230, 218, 206);
-	margin-top: -30vh;
+	background-color: #e6dace;
 	width: 100%;
-	min-height: 110vh;
 	align-items: center;
 	position: relative;
 	text-align: center;
 	align-content: center;
-	padding-top: 20% ;
+	padding: 10% 0;
 }
 .res h1{
-	font-size: 70px;
+	font-size: 3rem;
 }
 .res .experience{
 	max-width: 45%;
 	margin: auto;
 }
 .res .experience .cv{
-	margin: 80px 0;
+	margin: 1.5rem 0;
 	display: flex;
+	align-items: center;
 	max-width: 100%;
 	justify-content: space-between;
 }
@@ -303,10 +297,9 @@ button{
 }
 .infoCard p{
 	font-size: 17px;
-	/* font-weight: 600; */
 }
 form{
-	width: 40vw;
+	width: 90%;
 	margin: auto;
 }
 .nameContainer{
@@ -335,7 +328,7 @@ input:hover, textarea:hover{
 	padding: 40px;
 	padding-top: 70px;
 	text-align: left;
-	width: 76%;
+	width: 100%;
 }
 .skills{
 	display: flex;
@@ -350,7 +343,9 @@ input:hover, textarea:hover{
 .skills .square{
 	width: 10px;
 	height: 10px;
-	margin: auto 16px 5px 0;
+	flex-shrink: 0;
+	align-self: flex-start;
+	margin-top: 0.5rem;
 }
 .proImg{
 	width: 100%;
@@ -370,43 +365,59 @@ input:hover, textarea:hover{
 .proImg img:hover{
 	box-shadow: 0 0 17px 16px rgba(34, 34, 179, 0.305);
 }
-@media only screen and (max-width: 380px){
-	.left{
-		min-height: 140vh;
+
+@media screen and (max-width: 1025px) {
+	.nav-bar{
+		padding: 0 5%;
+	}
+	.footer{
+		padding: 0 5%;
+	}
+	.res .experience{
+		max-width: 65%;
 	}
 }
-@media only screen and (max-width: 700px) {
-	nav{
-		position: relative;
-		margin: 0;
-		padding: 0 10px 0 10px;
+
+@media only screen and (max-width: 380px){
+	.home{
+		padding: 10% 0;
 	}
+	.middle{
+		width: 95%;
+	}
+	nav .titleContainer h3{
+		font-size: 1.5rem;
+	}
+	nav .designation{
+		font-size: 1rem;
+	}
+}
+@media only screen and (max-width: 770px) {
 	nav img{
 		display: block;
 	}
-	.myName{
-		padding-bottom: 15px;
-		font-size: 25px;
-	}
 	.nameHead{
 		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
 	}
-	.designation{
-		padding: 0;
-		margin-top: -15px;
+	.nameHead .designation{
+		align-self: unset;
 	}
 
-	nav ul{
+	#menu{
 		position: absolute;
 		top: 0;
 		left: -100%;
 		padding: 15vh 0;
 		height: 100vh;
 		width: 100%;
-		display: block;
-		text-align: center;
 		background: #F4ECE6;
 		transition: all 0.8s ease;
+	}
+	nav ul{
+		display: block;
+		text-align: center;
 	}
 	nav ul li{
 		font-size: 30px;
@@ -419,25 +430,13 @@ input:hover, textarea:hover{
 	#closeBtn{
 		position: absolute;
 		z-index: 10;
-		top: 30px;
-		left: -13%;
-		transition: all 0.8s ease;
+		top: 15px;
+		right: 5%;
 	}
 	.home{
-		margin-top: 0;
-		padding-top: 0;
-	}
-	#page_content{
-		margin-top: 0;
-		padding-top: 0;
-	}
-	.left{
-		min-width: 100%;
-		margin-top: 15vh;
-		padding: 0;
+		background: linear-gradient(to top, #e6dace 0%,#e6dace 70%,#e6dace 70%,#fff 70%,#fff 100%);
 	}
 	.middle{
-		margin-left: -365px;
 		display: block;
 	}
 	.profile{
@@ -460,17 +459,20 @@ input:hover, textarea:hover{
 		margin-top: -40px;
 	}
 	.footer{
-		height: 30%;
-		text-align: left;
-		flex-wrap: wrap-reverse;
-		padding: 20px 40px;
+		flex-direction: column-reverse;
 		align-items: flex-start;
 	}
 	.contacts{
 		text-align: left;
+		align-items: flex-start;
+		flex-direction: column-reverse;
 	}
-	.contacts div{
-		margin: 15px 0;
+	.sign{
+		margin-bottom: 1rem;
+		font-size: 1.2rem;
+	}
+	.contacts>*{
+		margin: 1rem 0;
 	}
 	.res{
 		margin-top: 0;
